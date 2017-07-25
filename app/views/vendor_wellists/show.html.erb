@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Wellist:</strong>
+  <%= @wellist_vendor.wellist %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @wellist_vendor.vendor %>
+</p>
+
+<%= link_to 'Edit', edit_wellist_vendor_path(@wellist_vendor) %> |
+<%= link_to 'Back', wellist_vendors_path %>

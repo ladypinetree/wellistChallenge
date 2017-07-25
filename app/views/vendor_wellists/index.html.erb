@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Vendor Wellists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Wellist</th>
+      <th>Vendor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wellist_vendors.each do |wellist_vendor| %>
+      <tr>
+        <td><%= wellist_vendor.wellist %></td>
+        <td><%= wellist_vendor.vendor %></td>
+        <td><%= link_to 'Show', wellist_vendor %></td>
+        <td><%= link_to 'Edit', edit_wellist_vendor_path(wellist_vendor) %></td>
+        <td><%= link_to 'Destroy', wellist_vendor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vendor wellist', new_wellist_vendor_path %>

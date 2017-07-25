@@ -1,0 +1,12 @@
+<%= simple_form_for(@wellist_vendor) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :wellist %>
+    <%= f.association :vendor %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
